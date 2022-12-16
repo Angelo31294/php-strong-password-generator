@@ -1,12 +1,5 @@
 <?php
-$tiny = "abcdefghijklmnopqrstuvwxyz";
-$uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-$number = "0123456789";
-$special_characters = "£$%&+-*/><!?@§";
-$comb = $tiny.$uppercase.$number.$special_characters;
-$shuffle = str_shuffle($comb);
-$password = substr($shuffle,3,12);
-
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -22,15 +15,8 @@ $password = substr($shuffle,3,12);
     <body>
         <div class="container">
             <h1>Generatore di password casuale</h1>
-            <form action="" method="$_POST">
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>scegli la lunghezza della password</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
-            </form>
-            <span><?php echo $password; ?></span>
+            
         </div>
+        
     </body>
 </html>
